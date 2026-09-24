@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Regi Oliveira — Linkbio</title>
+  <meta name="description" content="Esposa • mãe • 100% no digital. TK shop • Shopee • Infoprodutos. Transformo conteúdo em renda.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #17110d;
+      --gold: #ead3a1;
+      --gold-soft: #f7e7c6;
+      --ink: #17110d;
+      --card: #ead3a1;
+      --radius: 24px;
+      --max: 420px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100dvh;
+      font-family: "Maven Pro", system-ui, sans-serif;
+      color: var(--gold-soft);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(238, 215, 167, 0.18), transparent 42%),
+        var(--bg);
+      background-attachment: fixed;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 0 16px 48px;
+    }
+
+    .cover {
+      position: relative;
+      height: 180px;
+      margin: 0 -16px 0;
+      overflow: hidden;
+    }
+
+    .cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 35%, var(--bg) 100%);
+    }
+
+    .profile {
+      position: relative;
+      z-index: 1;
+      margin-top: -56px;
+      text-align: center;
+      padding: 0 8px;
+    }
+
+    .avatar {
+      width: 104px;
+      height: 104px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--gold);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      background: #2a2118;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: var(--gold-soft);
+      margin-bottom: 8px;
+    }
+
+    .bio {
+      font-size: 0.92rem;
+      line-height: 1.45;
+      color: var(--gold-soft);
+      opacity: 0.95;
+      white-space: pre-line;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 22px 0 8px;
+    }
+
+    .socials a {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--gold);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .socials a:hover {
+      transform: translateY(-2px);
+      background: rgba(234, 211, 161, 0.12);
+    }
+
+    .socials svg { width: 26px; height: 26px; fill: currentColor; }
+
+    .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 64px;
+      padding: 10px 16px 10px 10px;
+      border-radius: var(--radius);
+      background: #000;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 2px 0 rgba(234, 211, 161, 0.25);
+      transition: transform 0.15s ease, filter 0.15s ease;
+    }
+
+    .btn:hover { transform: scale(1.015); filter: brightness(1.08); }
+
+    .btn img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .btn span { flex: 1; text-align: center; padding-right: 44px; }
+
+    .note {
+      text-align: center;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--gold-soft);
+      padding: 6px 4px 2px;
+    }
+
+    .card {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 10px;
+      border-radius: var(--radius);
+      background: var(--card);
+      color: var(--ink);
+      border: 1px solid var(--gold);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+    }
+
+    .card img {
+      width: 88px;
+      height: 88px;
+      border-radius: 18px;
+      object-fit: cover;
+      display: block;
+      background: #2a2118;
+    }
+
+    .card p {
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.35;
+      padding-right: 4px;
+      white-space: pre-line;
+    }
+
+    .footer {
+      margin-top: 36px;
+      text-align: center;
+      font-size: 0.75rem;
+      opacity: 0.45;
+    }
+
+    .footer a { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="cover">
+      <img
+        src="https://bio.linkcdn.cc/upload/80828013jkw8d/2026082801/178787952158258985.jpg"
+        alt=""
+      >
+    </div>
+
+    <header class="profile">
+      <div class="avatar">
+        <img
+          src="https://bio.linkcdn.cc/upload/80828013jkw8d/2026082801/178787955223073533.png"
+          alt="Regi Oliveira"
+        >
+      </div>
+      <h1>Regi Oliveira</h1>
+      <p class="bio">Esposa • mãe • 100% no digital
+📲 TK shop • Shopee • Infoprodutos
+💸 Transformo conteúdo em renda
+✨ Te mostro como começar também 👇🏼</p>
+    </header>
+
+    <nav class="socials" aria-label="Redes sociais">
+      <a href="https://www.instagram.com/apropriaregiane" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@apropriaregi" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 3c.4 2.4 1.9 4.2 4.3 4.6v3.1c-1.5-.1-2.9-.6-4.1-1.4v6.2a5.7 5.7 0 1 1-5.7-5.7c.3 0 .7 0 1 .1v3.2a2.6 2.6 0 1 0 1.8 2.5V3h2.7z"/></svg>
+      </a>
+      <a href="https://youtube.com/@apropriaregiane" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12.2s0-3.4-.4-5c-.3-1.2-1.1-2-2.3-2.3C18.6 4.5 12 4.5 12 4.5s-6.6 0-8.3.4C2.5 5.2 1.7 6 1.4 7.2.9 8.8.9 12.2.9 12.2s0 3.4.5 5c.3 1.2 1.1 2 2.3 2.3 1.7.4 8.3.4 8.3.4s6.6 0 8.3-.4c1.2-.3 2-1.1 2.3-2.3.4-1.6.4-5 .4-5zM9.8 15.5v-6.6l6.3 3.3-6.3 3.3z"/></svg>
+      </a>
+    </nav>
+
+    <section class="stack">
+      <a class="btn" href="https://wa.me/5541999853676" target="_blank" rel="noopener">
+        <img src="https://bio.linkcdn.cc/upload/80828013jkw8d/2026082801/178788135244214931.jpg" alt="">
+        <span>FALE COMIGO AQUI ✅️</span>
+      </a>
+
+      <p class="note">Quer aprender a transformar seu conteúdo em renda? Confira os materiais que preparei para você começar hoje mesmo!</p>
+
+      <a class="card" href="https://chat.whatsapp.com/BfZrKTdIo1T390UsXiO5XU?s=cl&amp;p=a&amp;ilr=4" target="_blank" rel="noopener">
+        <img src="https://bio.linkcdn.cc/upload/80828013jkw8d/2026082801/178788233897433105.jpg" alt="">
+        <p>DESAFIO PINTEREST BOSS - entre no grupo de espera e venha aprender a gerar tráfego orgânico pelo Pinterest.</p>
+      </a>
+
+      <a class="card" href="https://pay.kiwify.com.br/I2SpAeM?afid=YlyjSclP" target="_blank" rel="noopener">
+        <img src="https://bio.linkcdn.cc/upload/80828013jkw8d/2026082802/178788245540242960.jpg" alt="">
+        <p>PACK CÓDIGO VIRAL  - vídeos autorais de IA, descrições, links e capas personalizadas para Shopee.</p>
+      </a>
+
+      <a class="card" href="https://chat.whatsapp.com/DdvLF14KAup7z8PWgh67NG?s=cl&amp;p=a&amp;ilr=4" target="_blank" rel="noopener">
+        <img src="https://bio.linkcdn.cc/upload/80828013jkw8d/2026082802/178788463361717336.jpg" alt="">
+        <p>GRUPO DE NETWORK PARA AFILIADAS</p>
+      </a>
+
+      <a class="card" href="https://pay.cakto.com.br/harkh5c?affiliate=peUchd8L" target="_blank" rel="noopener">
+        <img src="https://bio.linkcdn.cc/upload/80828013jkw8d/2026082802/178788420810740513.jpg" alt="">
+        <p>Aura Galery | + de 200 prompt's prontos e validados para criar imagens e vídeos que chamam a atenção.</p>
+      </a>
+
+      <a class="card" href="https://pay.cakto.com.br/gp6nkq3?affiliate=r2mT4B82" target="_blank" rel="noopener">
+        <img src="https://bio.linkcdn.cc/upload/80828013jkw8d/2026082801/178788125659638215.jpg" alt="">
+        <p>Aura Criativ - crie roteiros, ganchos, legendas, CTAs e conteúdos UGC com inteligência artificial, tudo em um só lugar.</p>
+      </a>
+    </section>
+
+    <p class="footer">
+      Réplica estática de
+      <a href="https://linkbio.co/8082801ihKpWR" target="_blank" rel="noopener">linkbio.co/8082801ihKpWR</a>
+    </p>
+  </main>
+</body>
+</html>
